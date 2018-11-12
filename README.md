@@ -16,6 +16,6 @@ npm start
 '''
 
 ## Flow of the app
-* Add new user to the initialy empty users list stored in single Redux store by making an api call and generating a random user data from ___https://randomuser.me/documentationt___.
+* Add new user to the initialy empty users list stored in single Redux store by making an api call and generating a random user data from ___https://randomuser.me/documentation___.
 * Delete the user from the redux store after it is been created.
 
