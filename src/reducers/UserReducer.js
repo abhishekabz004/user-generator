@@ -3,9 +3,11 @@ import { ADD_USER, REMOVE_USER} from '../actions/actionsTypes'
 
 const INITIAL_DATA = []
 
+// Reducer defined to implement the maintainance of store. Involves adding and deleting user data in it. 
+
 const UserReducer = (state = INITIAL_DATA, action) => {
   switch (action.type) {
-    case ADD_USER:
+    case ADD_USER: // add the fetched user data into the existing state 
       return [
         ...state, {
           id: action.id,
@@ -14,7 +16,7 @@ const UserReducer = (state = INITIAL_DATA, action) => {
           pic: action.userData.picture.medium,
         }
       ]
-    case REMOVE_USER:
+    case REMOVE_USER: // delete the user data based on user Id sent in form of action
       const numIndex = parseInt(action.id);
       return state.filter(user => user.id !== numIndex);
     default:

@@ -4,6 +4,8 @@ import { addUser } from "../actions/actionCreator";
 import { bindActionCreators } from "redux";
 import axios from 'axios';
 
+//This component generates new random user by making an api call. 
+
 class GenerateUser extends Component {
   constructor(props) {
     super(props);
@@ -42,6 +44,7 @@ class GenerateUser extends Component {
   }
 }
 
+//This method is to dispatch ADD_USER action and hence the new user would be added to the store.
 const mapDispatchToProps = dispatch => {
   return bindActionCreators(
     {

@@ -11,8 +11,9 @@ const store = compose(
   window.devToolsExtension ? window.devToolsExtension() : f => f
 )(createStore)(MainReducer);
 
+//Provider is for binding the redux store to this app so that it can be accessed by all the further child components.
 ReactDOM.render(
-  <Provider store={store}>
+  <Provider store={store}>  
     <App />
   </Provider>,
   document.getElementById("root")
